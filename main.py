@@ -50,3 +50,20 @@ class Driver:
     def commande(self):
         print("je commande le moteur")
 
+class Arduino:
+    def __init__(self,pinA1,pinA2,pinA3,pinA4,pinA5,pinD1,pinD2,pinD3,pinD4,pinD5,pinVcc,pinGnd,pin5V):
+        self.pinA1=pinA1
+        self.pinA2=pinA2
+        self.pinA3=pinA3
+        self.pinA4=pinA4
+        self.pinA5=pinA5
+        self.pinD1=pinD1
+        self.pinD2=pinD2
+        self.pinD3=pinD3
+        self.pinD4=pinD4
+        self.pinD5=pinD5
+        self.pinVcc=pinVcc
+        self.pinGnd=pinGnd
+        self.pin5V=pin5V
+
+
