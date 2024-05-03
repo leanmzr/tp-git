@@ -66,4 +66,15 @@ class Arduino:
         self.pinGnd=pinGnd
         self.pin5V=pin5V
 
+pin5V=5
+pinGround=0
+pinEncodeur=None
+pinAlimentation=12
+pinTriceps=None
+pinBiceps=None
 
+gearMotor = Motor(num_serie="2715852",pinVccEnc=pin5V,pinGndEnc=pinGround,pinAlim=pinAlimentation,pinGndalim=pinGround,pinouputAnalog=pinEncodeur)
+EMG_biceps = EMG(pinVcc=pin5V,pinGnd=pinGround,pinOutputAnalog=pinBiceps)
+EMG_triceps = EMG(pinVcc=pin5V,pinGnd=pinGround,pinOutputAnalog=pinTriceps)
+pont_en_h = Driver(PinVcc=pin5V,PinGnd=pinGround,pinRightPWM='pin3',pinLeftPWM='pin4')
+arduino214= Arduino(pinA1=pinTriceps,pinA2=pinBiceps,pinA3=pinEncodeur,pinA4="pin",pinA5="pin",pinD1="pin",pinD2="pin",pinD3="pin",pinD4="pin",pinD5="pin",pinVcc=pinAlimentation,pinGnd=pinGround,pin5V=pin5V)
