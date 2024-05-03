@@ -16,5 +16,3 @@ class Motor:
 
     def TurnLeft (self):
         print(f"tourne a gauche selon les signaux")
-
-    
